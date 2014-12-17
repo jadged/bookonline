@@ -1,0 +1,315 @@
+/*
+Business Site
+Version 1.0.0
+Author: Zhukov Konstantin
+*/
+@import url("reset.css");
+
+/*General Styles*/
+html{
+    height: 100%;
+    background: #282828;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #686a6d;
+    min-height: 100%;
+    padding-top: 25px;
+}
+p{
+    line-height: 1.5;
+}
+code{
+    font-family: "Courier New", Courier, monospace;
+    color: #000;
+}
+a{
+    text-decoration: none;
+}
+blockquote{
+    font-style: italic;
+    background: #ccc;
+    margin-left: 20px;
+}
+
+#wrap{
+    width: 1000px;
+    background: #f5f6f6;
+    margin: 0 auto;
+    border-top: 7px solid #1f1f21;
+}
+
+.clear{
+    clear: both;
+}
+
+/*Header*/
+header{
+    display: block;
+    margin: 40px 131px 0 125px;
+}
+
+header span{
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #1f2025;
+}
+
+#search{
+    float: right;
+    padding-top: 8px;
+}
+
+#search_field{
+    width: 200px;
+    height: 27px;
+}
+
+#go{
+    margin:-1px 0 0 2px;
+    background: url("img/search_btn.gif");
+    width: 75px;
+    height: 34px;
+    float: right;
+}
+
+/*Navigation*/
+header ul{
+    margin: 40px 0 0 7px;
+    display: block;
+}
+
+header ul li{
+    float: left;
+    border-right: 1px solid #e5e4e2;
+}
+
+header ul li a{
+    display: block;
+    background: #1f2025;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #eaeaea;
+    text-decoration: none;
+    padding: 23px 45px;
+}
+header ul li a:hover{
+    background: #e5e4e2;
+    color: #1f2025;
+}
+
+/*Slider*/
+
+
+#slider_img{
+    width: 776px;
+    margin-left:-17px;
+}
+
+#spisok{
+    width: 939px;
+    padding-left: 23px;
+}
+#spisok img{
+    padding-left: 6px;
+}
+
+.post{
+    display: block;
+    width: 310px;
+    float: left;
+    padding-left: 50px;
+    font-size: 14px;
+}
+
+#content{
+    margin: 20px 131px 0 126px;
+    border-top: 6px solid #e6e5e3;
+    padding-top: 40px;
+}
+
+#content h3{
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+    padding-bottom: 25px;
+}
+
+.post p{
+    padding-bottom: 15px;
+}
+
+.post a{
+    display: block;
+    background: #1f2025;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #eaeaea;
+    text-decoration: none;
+    width: 66px;
+    padding: 8px 14px;
+}
+
+.post a:hover{
+    background: #e5e4e2;
+    color: #1f2025;
+}
+
+#clients{
+    float: left;
+    border-top: 6px solid #e6e5e3;
+    width: 744px;
+    margin: 40px 131px 0 126px;
+    padding: 40px 0 20px 0;
+}
+
+#clients h3{
+    font-size: 26px;
+    font-weight: 700;
+    color: #000000;
+    padding-bottom: 25px;
+}
+
+#clients img{
+    width:744px;
+}
+
+#footer{
+    float: left;
+    background: #1d1d1f;
+    width: 1000px;
+}
+
+#logo_footer{
+    float: left;
+    width: 250px;
+    margin: 70px 150px 100px 200px;
+}
+
+#logo_footer span{
+    color: #fff;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 22px;
+}
+
+#logo_footer p{
+    margin-top: 20px;
+    color: #adadad;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#logo_footer a:visited{
+    color: #adadad;
+}
+
+#logo_footer a{
+    color: #adadad;
+}
+
+.links_header{
+    color: #fff;
+    font-size: 18px;
+}
+
+#links{
+    float: left;
+    width: 300px;
+    margin: 70px 0 100px 30px;
+}
+
+#links ul{
+    float: left;
+    padding: 20px 20px 0 0;
+}
+
+#links ul a{
+    color: #adadad;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#links ul li{
+    line-height: 1.5;
+}
+
+#follow{
+    float: left;
+    width: 200px;
+    margin: 70px 100px 100px 70px;
+}
+
+#follow a{
+    color: #adadad;
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#follow .clear{
+    padding-bottom: 20px;
+}
+
+/*---------------Forms-----------------*/
+#content input[type="text"]{
+    width:200px;
+    height:30px;
+    padding:0 10px 0 10px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-shadow:inset 0 1px 2px #ccc;
+}
+textarea{
+    padding:10px 10px 0 10px;
+    border-radius:5px;
+    box-shadow:inset 0 1px 2px #ccc;
+}
+input:focus{
+    box-shadow:0 0 5px #333333;
+    outline:none;
+}
+textarea:focus{
+    box-shadow:0 0 5px #333333;
+    outline:none;
+}
+input[type="submit"], input[type="button"]{
+    width:150px;
+    height: 45px;
+}
+input[type="submit"]:hover, input[type="button"]:hover{
+    box-shadow:0 0 5px #333333;
+    outline:none;
+}
+table{
+    border:1px solid #ccc;
+}
+caption{
+    margin-bottom: 15px;
+}
+td{
+    padding:10px 10px;
+    border:1px solid #ccc;
+}
+#hrline{
+    border: 0; 
+    height: 1px; 
+    margin: 10px auto 15px 0;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0.75), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0.75), rgba(0,0,0,0.25), rgba(0,0,0,0));  
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0.75), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0.75), rgba(0,0,0,0.25), rgba(0,0,0,0)); 
+    width:550px;
+}
+.select{
+    background: #e5e4e2;
+    color: #1f2025;
+}
+#content a:visited{
+    color:#000;
+}
+#content a:hover{
+    color:red;
+}
