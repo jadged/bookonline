@@ -1,5 +1,8 @@
-﻿<?php
-if($_SERVER['REQUEST_METHOD']=="POST"){
+<?php
+    require_once 'output_fns.php';
+    do_html_header('shop');
+    
+    if($_SERVER['REQUEST_METHOD']=="POST"){
 		$isbn = strip_tags(trim($_POST['isbn']));
 		$author = strip_tags(trim($_POST['author']));
                 $title = strip_tags(trim($_POST['title']));
@@ -8,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
 		if (!$isbn || !$author || !$title || !$price) {
                     echo "Вы заполнили не все поля.<br/>".
                                       "Вернитесь назад и повторите ввод.<br/>".
-                                      "<a href='index.php?id=addbook'>Назад</a>";
+                                      "<a href='addbook.php'>Назад</a>";
                     exit;
                 }
                 
@@ -19,7 +22,7 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                     $price = addslashes($price);
                 }
                 
-                @ $db = new mysqli('localhost', 'admin', 'admin', 'shop');
+                @ $db = new mysqli('localhost', 'admin', 'admin', 'bookonline');
                 
                 if (mysqli_connect_errno()) {
                     echo "<script>alert('Неудалось выполнить соединение с базой. Повторите попытку позднее.');</script>";
@@ -32,11 +35,11 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                 
                 if ($result) {
                     echo 'Книга добавлена в базу данных!<br/>';
-                    echo '<a href="index.php?id=addbook">Добавить</a> новую книгу<br/>';
-                    echo '<a href="index.php?id=shop">Вернуться</a> в магазин<br/>';
+                    echo '<a href="addbook.php">Добавить</a> новую книгу<br/>';
+                    echo '<a href="shop.php">Вернуться</a> в магазин<br/>';
                 }else{
                     echo 'Ошибка. Книга не занесена. ';
-                    echo "<a href='index.php?id=addbook'>Повторить</a>";
+                    echo "<a href='addbook.php'>Повторить</a>";
                 }
                 $db->close();
 	}else{
@@ -47,25 +50,27 @@ if($_SERVER['REQUEST_METHOD']=="POST"){
                                 <caption>Добавление новой книги:</caption>
                                 <tr>
                                     <td>ISBN: </td>
-                                    <td><input type="text" name="isbn"/></td>
+                                    <td><input type="text" name="isbn" class="forms"/></td>
                                 </tr>
                                 <tr>
                                     <td>Автор: </td>
-                                    <td><input type="text" name="author"/></td>
+                                    <td><input type="text" name="author" class="forms"/></td>
                                 </tr>
                                 <tr>
                                     <td>Название: </td>
-                                    <td><input type="text" name="title"/></td>
+                                    <td><input type="text" name="title" class="forms"/></td>
                                 </tr>
                                 <tr>
                                     <td>Цена, тг</td>
-                                    <td><input type="text" name="price"/></td>
+                                    <td><input type="text" name="price" class="forms"/></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="submit"/></td>
-                                    <td><a href="index.php?id=shop"><input type="button" value="Назад"/></a></td>
+                                    <td><input type="submit" class="buttons"/></td>
+                                    <td><a href="shop.php"><input type="button" value="Назад" class="buttons"/></a></td>
                                 </tr>
                             </table>
 			</form>
 EOD;
 	}
+    do_html_footer();
+

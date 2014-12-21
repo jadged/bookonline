@@ -1,4 +1,8 @@
-﻿<h3><span>Обратная связь</span></h3>
+<?php
+    require_once 'output_fns.php';
+    do_html_header('contacts');
+?>
+    <h3><span>Обратная связь</span></h3>
 <?php
 function checkForm($str){
 	$swear = array('blya' => 'бля', 
@@ -16,7 +20,7 @@ function checkForm($str){
 		//Проверяем корректность e-mail
 		if (!preg_match('/[a-zA-Z0-9_\.]+@[a-zA-Z0-9_\.]+\.[a-zA-Z0-9_\.]/i', $email)) {
 			echo "<p>Введите e-mail правильно</p>";
-			echo "<a href='index.php?id=contacts'>Назад</a>";
+			echo "<a href='contacts.php'>Назад</a>";
 		}else{
 			//Постоянная информация
 			$toaddress = "jadged@yandex.ru";
@@ -33,7 +37,7 @@ function checkForm($str){
 				echo "<a href='index.php'>На главную</a>";
 			}else{
 				echo "<p>Произошла ошибка, пожалуйста попробуйте заново!</p>";
-				echo "<br/><a href='index.php?id=contacts'>Назад</a>";
+				echo "<br/><a href='contacts.php'>Назад</a>";
 			}
 		}
 	}else{
@@ -41,17 +45,22 @@ function checkForm($str){
 		<form action="" method="post">
 			<label>
 				Ваше имя:<br/>
-				<input type="text" name="username" placeholder="Костя"><br/>
+				<input type="text" name="username" placeholder="Костя" class="forms"><br/>
 			</label><br/>
 			<label>
 				Адрес e-mail:<br/>
-				<input type="text" name="email" placeholder="mail@example.com"><br/>
+				<input type="text" name="email" placeholder="mail@example.com" class="forms"><br/>
 			</label><br/>
 			<label>
 				Ваш отзыв:<br/>
 				<textarea name="feedback" rows="10" cols="50" placeholder="Введите отзыв"></textarea><br/>
 			</label><br/>
-			<input type="submit"> 
+			<input type="submit" class="buttons"> 
 		</form>
 LABEL;
 	}
+    do_html_footer();
+
+
+
+

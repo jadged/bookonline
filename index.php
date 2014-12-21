@@ -1,65 +1,26 @@
-<?
-    include 'inc/head.inc.php';
+<?php
+require_once 'output_fns.php';
+
+do_html_header('index');
 ?>
-<!DOCTYPE html>
-<html lang="ru-RU">
-<head>
-    <title>Book Online</title>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body lang="ru">
-<div id="wrap">
-    <header>
-        <img src="img/logo_site.png"/><span>Book Online</span>
-        <div id="search">
-            <input type="text" name="s" id="search_field"/>
-            <input type="submit" value="" id="go"/>
-        </div>
-        <ul>
-            <li><a href="index.php" <?=$home?>>Главная</a></li>
-            <li><a href="index.php?id=about" <?=$ab?>>Об авторе</a></li>
-            <li><a href="index.php?id=services" <?=$srv?>>Сервисы</a></li>
-            <li><a href="index.php?id=shop" <?=$magazine?>>Магазин</a></li>
-            <li><a href="index.php?id=contacts" <?=$contac?>>Контакты</a></li>
-        </ul>
-    </header>
-<div class="clear"></div>
-<div id="content">
-        <?include 'inc/routing.inc.php';?>
+    <div id="slider">
+    <img src="img/slider.png" id="slider_img"/>
 </div>
-    <div id="clients">
-        <h3>Наши клиенты</h3>
-        <img src="img/our_client.png"/>
-    </div><div class="clear"></div>
-    <div id="footer">
-        <div id="logo_footer">
-            <span>Book Online</span>
-            <p>Книги — это инструмент насаждения мудрости.</p>
-            <p>&copy;<?=date('Y')?> | <a href="index.php?id=faq">Все права защищены</a></p>
+<div class="post">
+            <h3>Planning</h3>
+            <img src="img/photo_1.jpg"/>
+            <p>According to the foregoing, Fermat's last theorem actually changes the empirical divergent series.
+                The fact that partial differential equation concentrates the greatest common factor (GCF).
+            </p>
+            <a href="#">READ MORE</a>
         </div>
-        <div id="links">
-            <span class="links_header">Ссылки по теме</span><div class="clear"></div>
-            <ul>
-                <a href="index.php"<?=$home?>><li>Главная</li></a>
-                <a href="index.php?id=about" <?=$ab?>><li>Об авторе</li></a>
-                <a href="index.php?id=services" <?=$srv?>><li>Сервисы</li></a>
-                <a href="index.php?id=shop" <?=$magazine?>><li>Магазин</li></a>
-                <a href="index.php?id=contacts" <?=$contac?>><li>Контакты<li></a>
-            </ul>
-            <ul>
-                <a href="#"><li>Войти</li></a>
-                <a href="#"> <li>Форум</li></a>
-                <a href="#"><li>FAQ</li></a>
-            </ul>
+        <div class="post">
+            <h3>Integration</h3>
+            <img src="img/photo_2.jpg"/>
+            <p>According to the foregoing, Fermat's last theorem actually changes the empirical divergent series.
+                The fact that partial differential equation concentrates the greatest common factor (GCF).
+            </p>
+            <a href="#">READ MORE</a>
         </div>
-    </div>
-</div>
-</body>
-</html>
-
-
-
-
-
-            
+    <?php
+    do_html_footer();

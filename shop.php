@@ -1,5 +1,8 @@
-﻿<?php
-	if($_SERVER['REQUEST_METHOD']=="POST"){
+<?php
+    require_once 'output_fns.php';
+    do_html_header('shop');
+    
+if($_SERVER['REQUEST_METHOD']=="POST"){
 		$searchtype = strip_tags(trim($_POST['searchtype']));
 		$searchterm = strip_tags(trim($_POST['searchterm']));
                 
@@ -8,8 +11,7 @@
                     $searchterm = addslashes($searchterm);
                 }
                 
-                @ $db = new mysqli('localhost', 'admin', 'admin', 'shop');
-                
+                @ $db = new mysqli('localhost', 'admin', 'admin', 'bookonline');
                 if (mysqli_connect_errno()) {
                     echo "<script>alert('Неудалось выполнить соединение с базой. Повторите попытку позднее.');</script>";
                     echo "<script>history.back()</script>";
@@ -32,7 +34,7 @@
                     echo stripslashes($row['price']);
                     echo " тг</p><hr id='hrline'/>";
                 }
-                echo '<a href="index.php?id=shop">Искать заново</a>';
+                echo '<a href="shop.php">Искать заново</a>';
                 $result->free();
                 $db->close();
 	}else{
@@ -52,13 +54,15 @@
                                 </tr>
                                 <tr>
                                     <td>Введите информацию для поиска: </td>
-                                    <td><input type="text" name="searchterm" size="40"/></td>
+                                    <td><input type="text" name="searchterm" size="40" class="forms"/></td>
                                 </tr>
                                 <tr>
-                                    <td><input type="submit" name="submit" value="Найти"/></td>
-                                    <td><a href="index.php?id=addbook" style="text-decoration:none"><input type="button" value="Добавить книгу"></a></td>
+                                    <td><input type="submit" name="submit" value="Найти" class="buttons"/></td>
+                                    <td><a href="addbook.php" style="text-decoration:none"><input type="button" value="Добавить книгу" class="buttons"></a></td>
                                 </tr>
                             </table>
 			</form>
 EOD;
 	}
+    do_html_footer();
+	
