@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 	if($_SERVER['REQUEST_METHOD']=="POST"){
 		$searchtype = strip_tags(trim($_POST['searchtype']));
 		$searchterm = strip_tags(trim($_POST['searchterm']));

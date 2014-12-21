@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $id = strip_tags(trim($_GET['id']));
 switch ($id){
     case 'about':

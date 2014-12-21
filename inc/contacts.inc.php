@@ -1,4 +1,4 @@
-<h3><span>Обратная связь</span></h3>
+﻿<h3><span>Обратная связь</span></h3>
 <?php
 function checkForm($str){
 	$swear = array('blya' => 'бля', 

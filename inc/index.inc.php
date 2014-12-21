@@ -1,4 +1,4 @@
-<div id="slider">
+﻿<div id="slider">
     <img src="img/slider.png" id="slider_img"/>
 </div>
 <div class="post">

@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 $title = '';
 switch ($_GET['id']){
     case 'about':

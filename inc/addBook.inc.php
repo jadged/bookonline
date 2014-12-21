@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 if($_SERVER['REQUEST_METHOD']=="POST"){
 		$isbn = strip_tags(trim($_POST['isbn']));
 		$author = strip_tags(trim($_POST['author']));
