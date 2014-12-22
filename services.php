@@ -3,6 +3,6 @@
     do_html_header('services');
 ?>
     <h3><span>Сервисы</span></h3>
-    <a href="login.php">reg</a>
+    <a href="register_form.php">reg</a>
 <?php
     do_html_footer();

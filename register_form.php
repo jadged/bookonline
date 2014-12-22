@@ -22,16 +22,19 @@
         margin:0 auto;
     }
 </style>
-    <form action="" method="post">
+<form action="register_new.php" method="post">
         <table>
             <tr>
                 <td><input type="text" name="username" placeholder="Имя пользователя" class="forms"></td>
             </tr>
             <tr>
+                <td><input type="text" name="email" placeholder="E-mail" class="forms"></td>
+            </tr>
+            <tr>
                 <td><input type="password" name="passwd" placeholder="Пароль" class="forms"></td>
             </tr>
             <tr>
-                <td><input type="text" name="email" placeholder="E-mail" class="forms"></td>
+                <td><input type="password" name="passwd2" placeholder="Пароль еще раз" class="forms"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Зарегистрироваться" class="buttons"><a href="index.php">
